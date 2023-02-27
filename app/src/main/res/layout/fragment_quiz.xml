@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.QuizFragment">
+
+        <ImageView
+            android:id="@+id/ivCup"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/coffee_cup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Apa yang kamu minum jika kamu ingin rileks?"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@id/ivCup"
+            app:layout_constraintTop_toBottomOf="@id/ivCup"
+            app:layout_constraintEnd_toEndOf="@id/ivCup"/>
+
+        <Button
+            android:id="@+id/btnTea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:padding="16dp"
+            android:text="TEH"
+            app:layout_constraintEnd_toStartOf="@+id/btnCoffee"
+            app:layout_constraintStart_toStartOf="@id/tvQuestion"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+        <Button
+            android:id="@+id/btnCoffee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:padding="16dp"
+            android:text="Kopi"
+            app:layout_constraintEnd_toEndOf="@id/tvQuestion"
+            app:layout_constraintStart_toEndOf="@id/btnTea"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
